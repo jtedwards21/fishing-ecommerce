@@ -1,16 +1,7 @@
 import React from "react"
 
-const buttonStyles = {
-  fontSize: "13px",
-  textAlign: "center",
-  color: "#fff",
-  outline: "none",
-  padding: "12px 60px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "rgb(255, 178, 56)",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
-}
+import p01 from '../images/products/pic01.png'
+import p02 from '../images/products/pic02.png'
 
 const Checkout = class extends React.Component {
   // Initialise Stripe.js with your publishable key.
@@ -37,12 +28,15 @@ const Checkout = class extends React.Component {
 
   render() {
     return (
-      <button
-        style={buttonStyles}
-        onClick={event => this.redirectToCheckout(event)}
-      >
-        BUY MY BOOK
-      </button>
+      <div class="product-card" onClick={event => this.redirectToCheckout(event)}>
+        <div class="product-image">
+          <img src={p01}/>
+        </div>
+        <div class="product-info">
+          <h5>Winter Jacket</h5>
+          <h6>$99.99</h6>
+        </div>
+      </div>
     )
   }
 }

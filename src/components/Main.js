@@ -24,9 +24,12 @@ class Main extends React.Component {
         </article>
 
         <article id="shop" className={`${this.props.article === 'shop' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Shop</h2>
-          <p>We offer a variety of different baits.</p>
-          <Checkout />
+          <h2 className="major">Hardbaits</h2>
+          <div className="products">
+            <Checkout />
+            <Checkout />
+            <Checkout />
+          </div>
           {close}
         </article>
 
