@@ -33,8 +33,8 @@ const Checkout = class extends React.Component {
           <img src={p01}/>
         </div>
         <div class="product-info">
-          <h5>Winter Jacket</h5>
-          <h6>$99.99</h6>
+          <h5 className="product-title">Hardbait</h5>
+          <h6 className="product-amount">$99.99</h6>
         </div>
       </div>
     )

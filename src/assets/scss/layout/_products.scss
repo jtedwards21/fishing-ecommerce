@@ -1,18 +1,32 @@
 .products {
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.product-title {
+  text-align: center;
+  cursor: pointer;
+}
+
+.product-amount {
+  text-align: center;
+  cursor: pointer;
 }
 
 .product-card {
   padding: 2%;
   flex-grow: 1;
-  flex-basis: 20%;
+  flex-basis: 19%;
+  margin-left: .2%;
+  background-color: white;
 
   display: block;
 }
 
 .product-image img {
   max-width: 100%;
+  cursor: pointer
 
 }
 
