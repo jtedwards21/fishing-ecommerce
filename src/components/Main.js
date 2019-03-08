@@ -37,7 +37,9 @@ class Main extends React.Component {
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">About</h2>
           <span className="image main"><img src={pic03} alt="" /></span>
-          <p>We are a team of designers designing lures and fishing equipment for sale.</p>
+          <p>We began manufacturing and selling fishing lures in the early 2000's, first locally, then with an online presence.</p>
+          <p>Our aim is to produce quality fishing products at reasonable prices and performance that exceeds customer expectations.</p>
+          <p>Bass, redfish, trout, pike... make fishing history together with MMM Lures.</p>
           {close}
         </article>
 
