@@ -29,6 +29,8 @@ class Main extends React.Component {
             <Checkout />
             <Checkout />
             <Checkout />
+            <Checkout />
+            <Checkout />
           </div>
           {close}
         </article>
