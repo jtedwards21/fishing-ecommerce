@@ -5,7 +5,7 @@ import p01 from '../images/products/pic01.png'
 
 const Cart = class extends React.Component {
   state = {
-    cart: [{name:'dog', price: '7', type:'animal', sku:'001', quantity:'1'}],
+    cart: [{name:'dog', price: '7.5', type:'animal', sku:'001', quantity:'1'}],
   }
 
   componentDidMount() {
@@ -46,7 +46,11 @@ const Cart = class extends React.Component {
     //Generate content
 
     var i = 1;
-    var total = 77;
+    var total = Number(this.state.cart[0].quantity) * Number(this.state.cart[0].price);
+    total = total.toFixed(2);
+
+    var price = (Number(this.state.cart[0].price)).toFixed(2);
+
 
     //return the html
     return (
@@ -56,15 +60,16 @@ const Cart = class extends React.Component {
           <tr>
             <th>Picture</th>
             <th>Description</th>
+            <th>Unit Price</th>
             <th>Quantity</th>
-            <th>Price</th>
-
+            <th>Total</th>
           </tr>
           <tr>
             <td><img className="table-image" src={p01}/></td>
             <td className="table-description">{this.state.cart[0].name}</td>
+            <td>${price}</td>
             <td>{this.state.cart[0].quantity}</td>
-            <td>{this.state.cart[0].price}</td>
+            <td>${total}</td>
           </tr>
         </tbody>
 
