@@ -3,7 +3,7 @@ import React from 'react'
 
 const Cart = class extends React.Component {
   state = {
-    cart: [],
+    cart: [{name:'dog', type:'animal', sku:'001', quantity:'1'}],
   }
 
   componentDidMount() {
@@ -14,6 +14,8 @@ const Cart = class extends React.Component {
     if (existingCart && existingCart.length) {
       this.setState({ cart: existingCart })
     }
+
+    console.log(this.state.cart)
   }
 
   getCart() {
@@ -39,12 +41,25 @@ const Cart = class extends React.Component {
   }
 
   render() {
+    //Generate content
+
+
     return (
       <div>
-        {React.cloneElement(this.props.children, {
-          addToCart: this.addToCart.bind(this),
-          cart: this.state.cart,
-        })}
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>{this.state.cart[0].name}</td>
+            <td>{this.state.cart[0].name}</td>
+            <td>{this.state.cart[0].name}</td>
+          </tr>
+        </tbody>
+      </table>
       </div>
     )
   }
