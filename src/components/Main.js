@@ -48,7 +48,7 @@ class Main extends React.Component {
         </article>
 
         <article id="cart" className={`${this.props.article === 'cart' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Cart</h2>
+          <h2 className="major">My Cart</h2>
           <Cart />
           {close}
         </article>

@@ -68,7 +68,11 @@ const Cart = class extends React.Component {
             <td><img className="table-image" src={p01}/></td>
             <td className="table-description">{this.state.cart[0].name}</td>
             <td>${price}</td>
-            <td>{this.state.cart[0].quantity}</td>
+            <td>
+              <span className="adjust-text">-  </span>
+              <span>{this.state.cart[0].quantity}</span>
+              <span className="adjust-text">  +</span>
+            </td>
             <td>${total}</td>
           </tr>
         </tbody>
