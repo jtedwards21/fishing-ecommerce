@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import about_pic from '../images/about_pic.jpg'
 
 import Checkout from '../components/Checkout'
+import Cart from '../components/Cart'
 
 class Main extends React.Component {
   render() {
@@ -48,6 +49,7 @@ class Main extends React.Component {
 
         <article id="cart" className={`${this.props.article === 'cart' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Cart</h2>
+          <Cart />
           {close}
         </article>
 
