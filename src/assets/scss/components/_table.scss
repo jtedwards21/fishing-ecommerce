@@ -13,11 +13,15 @@
 
 	table {
 		margin: 0 0 _size(element-margin) 0;
-		width: 100%;
+		max-width: 100%;
+		color: black;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
 
 		tbody {
 			tr {
-				border: solid _size(border-width) _palette(border);
+				border: solid _size(border-width) _palette(black);
 				border-left: 0;
 				border-right: 0;
 
@@ -28,23 +32,23 @@
 		}
 
 		td {
-			padding: 0.75em 0.75em;
+			padding: 0.75em 1.75em;
+			vertical-align: middle;
 		}
 
 		th {
-			color: _palette(fg-bold);
 			font-size: 0.9em;
 			font-weight: _font(weight-bold);
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			padding: 0 1.75em 0.75em 1.75em;
+			vertical-align: middle;
 		}
 
 		thead {
-			border-bottom: solid (_size(border-width) * 2) _palette(border);
+			border-bottom: solid (_size(border-width) * 2) black;
 		}
 
 		tfoot {
-			border-top: solid (_size(border-width) * 2) _palette(border);
+			border-top: solid (_size(border-width) * 2) black;
 		}
 
 		&.alt {

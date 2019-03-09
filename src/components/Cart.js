@@ -1,9 +1,11 @@
 import React from 'react'
 
+import p01 from '../images/products/pic01.png'
+
 
 const Cart = class extends React.Component {
   state = {
-    cart: [{name:'dog', type:'animal', sku:'001', quantity:'1'}],
+    cart: [{name:'dog', price: '7', type:'animal', sku:'001', quantity:'1'}],
   }
 
   componentDidMount() {
@@ -43,22 +45,30 @@ const Cart = class extends React.Component {
   render() {
     //Generate content
 
+    var i = 1;
+    var total = 77;
 
+    //return the html
     return (
       <div>
       <table>
         <tbody>
           <tr>
-            <th>Name</th>
+            <th>Picture</th>
+            <th>Description</th>
             <th>Quantity</th>
             <th>Price</th>
+
           </tr>
           <tr>
-            <td>{this.state.cart[0].name}</td>
-            <td>{this.state.cart[0].name}</td>
-            <td>{this.state.cart[0].name}</td>
+            <td><img className="table-image" src={p01}/></td>
+            <td className="table-description">{this.state.cart[0].name}</td>
+            <td>{this.state.cart[0].quantity}</td>
+            <td>{this.state.cart[0].price}</td>
           </tr>
         </tbody>
+
+
       </table>
       </div>
     )
