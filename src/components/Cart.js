@@ -40,7 +40,6 @@ const Cart = class extends React.Component {
   }
 
   render() {
-    //Generate content
 
 
 
@@ -58,9 +57,14 @@ const Cart = class extends React.Component {
           </tr>
           <CartItem />
         </tbody>
-
-
       </table>
+      <div className="checkout-button">
+        <div >
+        <h3 className="checkout-total">Total:</h3>
+        <h3 className="checkout-total">hi</h3>
+        </div>
+        <button>Checkout</button>
+      </div>
       </div>
     )
   }

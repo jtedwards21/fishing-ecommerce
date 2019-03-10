@@ -95,6 +95,12 @@
 
 	h3 {
 		font-size: 1rem;
+
+		&.checkout-total {
+			display: inline;
+			color: black;
+		}
+
 	}
 
 	h4 {
