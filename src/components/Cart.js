@@ -1,6 +1,5 @@
 import React from 'react'
-
-import p01 from '../images/products/pic01.png'
+import CartItem from '../components/CartItem'
 
 
 const Cart = class extends React.Component {
@@ -16,9 +15,9 @@ const Cart = class extends React.Component {
     if (existingCart && existingCart.length) {
       this.setState({ cart: existingCart })
     }
-
-    console.log(this.state.cart)
   }
+
+
 
   getCart() {
     return this.state.cart
@@ -45,11 +44,6 @@ const Cart = class extends React.Component {
   render() {
     //Generate content
 
-    var i = 1;
-    var total = Number(this.state.cart[0].quantity) * Number(this.state.cart[0].price);
-    total = total.toFixed(2);
-
-    var price = (Number(this.state.cart[0].price)).toFixed(2);
 
 
     //return the html
@@ -64,17 +58,7 @@ const Cart = class extends React.Component {
             <th>Quantity</th>
             <th>Total</th>
           </tr>
-          <tr>
-            <td><img className="table-image" src={p01}/></td>
-            <td className="table-description">{this.state.cart[0].name}</td>
-            <td>${price}</td>
-            <td>
-              <span className="adjust-text">-  </span>
-              <span>{this.state.cart[0].quantity}</span>
-              <span className="adjust-text">  +</span>
-            </td>
-            <td>${total}</td>
-          </tr>
+          <CartItem />
         </tbody>
 
 
