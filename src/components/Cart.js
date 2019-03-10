@@ -17,8 +17,6 @@ const Cart = class extends React.Component {
     }
   }
 
-
-
   getCart() {
     return this.state.cart
   }

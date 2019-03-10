@@ -13,6 +13,7 @@ const CartItem = class extends React.Component {
 
   componentDidMount() {
   this.increaseQuantity = this.increaseQuantity.bind(this);
+  this.decreaseQuantity = this.decreaseQuantity.bind(this);
 
 
 
@@ -26,6 +27,16 @@ const CartItem = class extends React.Component {
 
     console.log(this.state.quantity);
 
+  }
+
+  decreaseQuantity() {
+
+        var nq = Number(this.state.quantity) - 1;
+        console.log(nq);
+
+        if (nq != -1){
+          this.setState({ quantity: nq.toString() });
+        }
   }
 
   render() {
@@ -44,7 +55,7 @@ const CartItem = class extends React.Component {
             <td className="table-description">{this.state.name}</td>
             <td>${price}</td>
             <td>
-              <span className="adjust-text">-  </span>
+              <span className="adjust-text" onClick={this.decreaseQuantity}>-  </span>
               <span>{this.state.quantity}</span>
               <span className="adjust-text" onClick={this.increaseQuantity}>  +</span>
             </td>
